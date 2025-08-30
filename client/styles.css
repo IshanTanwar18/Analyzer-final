@@ -1,0 +1,395 @@
+/* /* #foodHistory {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f4f4f4;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#foodHistory ul {
+    list-style-type: none;
+    padding: 0;
+}
+#foodHistory li {
+    background: white;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 4px;
+} */
+
+
+
+
+
+
+
+
+/* #foodHistory {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f4f4f4;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#foodHistory ul {
+    list-style-type: none;
+    padding: 0;
+}
+#foodHistory li {
+    background: white;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 4px;
+} */
+
+/*   login page css*/
+
+
+
+
+
+/* General styles *
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container styling *
+.container {
+    background-color: white;
+    padding: 20px;
+    width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Heading *
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Input fields *
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Buttons *
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1877f2;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #165cbb;
+}
+
+/* Register button *
+button:nth-of-type(2) {
+    background-color: #42b72a;
+}
+
+button:nth-of-type(2):hover {
+    background-color: #36a420;
+}
+
+/* Responsive *
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+    }
+}
+/*
+
+
+
+
+
+
+
+/* General styles *
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Main wrapper *
+.wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Login and Register Container *
+.container {
+    background-color: white;
+    padding: 20px;
+    width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Headings *
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Input fields *
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Buttons *
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1877f2;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #165cbb;
+}
+
+/* Register button *
+.register-container button {
+    background-color: #42b72a;
+}
+
+.register-container button:hover {
+    background-color: #36a420;
+}
+
+/* Layout for Desktop *
+@media (min-width: 768px) {
+    .wrapper {
+        flex-direction: row;
+    }
+}
+
+/* Responsive for smaller screens *
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+    }
+}
+*/
+
+
+
+
+/* Navigation Bar */
+header {
+    background-color: #3a7bd5; /* Deep Blue */
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 5px 10px;
+    
+}
+
+.placeholder {
+    border: none;
+    padding: 8px;
+    width: 200px;
+    outline: none;
+    background: transparent;
+}
+
+.search-icon {
+    color: #3a7bd5;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff6699; /* Soft Pink */
+}
+
+
+
+
+
+
+
+
+
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    /*justify-content: space-evenly;
+    /align-items: center;*/
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    padding: 300px;
+    max-width: 1000px;
+}
+
+/* Left side: Logo & Tagline */
+.left {
+    flex: 1;
+    text-align: left;
+    padding-right: 60px;
+}
+
+.left h1 {
+    font-size: 70px;
+    color: #1070ed;
+    margin: 0;
+}
+
+.left p {
+    font-size: 28px;
+    color: #232323;
+    margin-top: 2px;
+}
+
+/* Right side: Login/Register Form */
+.right {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    
+    text-align: center;
+    max-width: 400px;
+}
+
+.right h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:hover{
+    border: 1.5px solid #3286f3;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #165dd8;
+}
+
+.register-btn {
+    background-color: #42b72a;
+    margin-top: 10px;
+}
+
+.register-btn:hover {
+    background-color: #36a420;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .left {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+} 

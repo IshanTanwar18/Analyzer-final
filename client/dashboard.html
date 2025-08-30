@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+    /* Navbar */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #1976d2;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+    
+    .navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .navbar ul li {
+        margin: 0 20px;
+    }
+    
+    .navbar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px 15px;
+    }
+    
+    .navbar ul li a:hover {
+        background: #1565c0;
+        border-radius: 5px;
+    }
+    
+    /* Welcome message */
+    .header {
+        position: absolute;
+        top: 60px; /* Moved below the navbar */
+        left: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #0d47a1;
+    }
+    
+    /* Food history box - Right corner */
+    #foodHistory {
+        position: absolute;
+        top: 60px; /* Moved below navbar */
+        right: 20px;
+        width: 250px;
+        max-height: 300px;
+        overflow-y: auto;
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        font-size: 14px;
+    }
+    
+    /* Centering the main content */
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    /* Styling for the calorie analyzer box */
+    .product {
+        background-color: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 50%;
+        text-align: center;
+        margin-top: 80px; /* To ensure it doesn't overlap with navbar */
+    }
+    
+    /* Input and button styling */
+    .product input, .product button {
+        width: 80%;
+        padding: 12px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #90caf9;
+    }
+    
+    .product button {
+        background-color: #1976d2;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    .product button:hover {
+        background-color: #1565c0;
+    }
+    
+    /* Logout button at the bottom */
+    .logout-btn {
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #d32f2f;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+    
+    .logout-btn:hover {
+        background-color: #b71c1c;
+    }
+    .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1976d2; /* Blue color */
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer button {
+    background-color: white;
+    color: #1976d2;
+    border: 2px solid #1976d2;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.footer button:hover {
+    background-color: #1565c0;
+    color: white;
+}
+
+    
+
+    </style>
+</head>
+<body onload="loadDashboard()">
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="bmr.html">BMR</a></li>
+            <!-- <li><a href="#">Logout</a></li> -->
+        </ul>
+    </nav>
+
+    <div class="container">
+        
+        <div class="header">
+            <h1>Welcome, <span id="userName"></span>!</h1>
+        </div>
+        <div class="content">
+            <div class="product">    
+                <div id="foodHistory"></div>
+                <h2>Calorie & Running Distance Calculator</h2>
+                <input type="text" id="foodInput" placeholder="Enter food item...">
+                <button onclick="fetchFoodData()">Check Calories</button>
+                <div id="result"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

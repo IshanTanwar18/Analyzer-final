@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMR Calculator</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1976d2;
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ensures vertical alignment */
+    gap: 20px; /* Adds equal spacing between items */
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block; /* Ensures proper inline alignment */
+    margin: 0;
+}
+
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+.navbar ul li a:hover {
+    background: #1565c0;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background: linear-gradient(to right, #64b5f6, #1976d2);
+    color: white;
+    padding: 100px 20px;
+    margin-top: 60px; /* Push content below navbar */
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+}
+
+/* Main Container */
+.container {
+    background: white;
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.container h2 {
+    color: #1976d2;
+    margin-bottom: 10px;
+}
+
+.container .info {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+#bmr-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#bmr-form label {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#bmr-form input, 
+#bmr-form select, 
+#bmr-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #90caf9;
+}
+
+#bmr-form button {
+    background-color: #1976d2;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+}
+
+#bmr-form button:hover {
+    background-color: #1565c0;
+}
+
+/* BMR Result */
+#bmr-result {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #0d47a1;
+}
+
+/* Additional Information Section */
+.bmr-extra {
+    background: #e3f2fd;
+    padding: 30px 20px;
+    text-align: center;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.bmr-extra h3 {
+    color: #1976d2;
+    margin-bottom: 10px;
+}
+
+.bmr-extra ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.bmr-extra ul li {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #1976d2;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Kholdo Link */
+a[href="index.html"] {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #1976d2;
+}
+
+a[href="index.html"]:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+        <ul>            
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="bmr.html">BMR</a></li>       
+        </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Understand Your Metabolism</h1>
+            <p>Use our BMR calculator to determine how many calories your body needs at rest.</p>
+        </div>
+    </section>
+    
+    <section class="container">
+        <h2>BMR Calculator</h2>
+        <p class="info">Your Basal Metabolic Rate (BMR) is the number of calories your body burns at rest to maintain vital functions like breathing and digestion.</p>
+        <form id="bmr-form">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" required>
+            
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" required>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" required>
+            
+            <label for="gender">Gender:</label>
+            <select id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            
+            <button type="submit">Calculate BMR</button>
+        </form>
+        <p id="bmr-result"></p>
+    </section>
+    
+    <section class="bmr-extra">
+        <h3>Why is BMR Important?</h3>
+        <p>Knowing your BMR helps you create an effective diet and fitness plan. It allows you to:</p>
+        <ul>
+            <li>Estimate your daily calorie needs</li>
+            <li>Set weight loss or muscle gain goals</li>
+            <li>Improve your overall health and metabolism</li>
+        </ul>
+    </section>
+    
+    <footer>
+        <p>Take Care With Analyzer</p>
+    </footer>
+    
+    <script>
+        document.getElementById('bmr-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let weight = document.getElementById('weight').value;
+            let height = document.getElementById('height').value;
+            let age = document.getElementById('age').value;
+            let gender = document.getElementById('gender').value;
+            
+            let bmr = gender === "male" ?
+                10 * weight + 6.25 * height - 5 * age + 5 :
+                10 * weight + 6.25 * height - 5 * age - 161;
+            
+            document.getElementById('bmr-result').textContent = `Your BMR: ${bmr} kcal/day`;
+        });
+    </script>
+
+<a href="index.html">Home</a>
+
+</body>
+</html>
